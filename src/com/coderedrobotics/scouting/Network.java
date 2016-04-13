@@ -30,6 +30,7 @@ public class Network {
             boolean sallyPort, boolean rockWall, boolean roughTerrain, boolean lowBar,
             boolean challenge, boolean attemptedScale, boolean successfullyScaledTower,
             int speed, boolean broken, boolean gameRules, String notes, int team) throws IOException {
+        notes = notes == null ? "" : notes; // replace null with ""
         output.write(PrimitiveSerializer.toByteArray(team));
         output.write(PrimitiveSerializer.toByteArray(autoReach));
         output.write(PrimitiveSerializer.toByteArray(autoLowGoal));
